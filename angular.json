@@ -93,10 +93,14 @@
             "styles": [
               "src/styles.less"
             ],
-            "scripts": []
+           "scripts": [
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

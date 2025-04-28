@@ -1,0 +1,67 @@
+<!-- login.component.html -->
+<div class="login-container">
+  <section class="title-section">
+    <h1>Welecom to</h1>
+    <p>快來跟著iris一步一步存錢通關吧</p>
+    <img src="/image/money.png" alt="money" class="money" />
+  </section>
+  <section class="login-section">
+    <div class="back-container" (click)="goBack()">
+      <img src="/image/back.png" alt="回主頁" class="back" />
+      回主頁
+    </div>
+
+    <table>
+      <tr>
+        <td><label for="username">暱稱</label></td>
+        <td>
+          <input
+            id="username"
+            type="text"
+            placeholder="請輸入暱稱"
+            [(ngModel)]="username"
+          />
+        </td>
+      </tr>
+      <tr *ngIf="isRegisterMode">
+        <td><label for="email">帳號</label></td>
+        <td>
+          <input
+            id="email"
+            type="text"
+            placeholder="請輸入帳號(Email)"
+            [(ngModel)]="email"
+          />
+        </td>
+      </tr>
+      <tr *ngIf="isRegisterMode">
+        <td><label for="emailcode">驗證碼</label></td>
+        <td>
+          <input
+            id="emailcode"
+            type="text"
+            placeholder="請輸入信箱驗證碼"
+            [(ngModel)]="emailcode"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td><label for="password">密碼</label></td>
+        <td>
+          <input
+            id="password"
+            type="password"
+            placeholder="請輸入密碼"
+            [(ngModel)]="password"
+          />
+        </td>
+      </tr>
+    </table>
+    <div class="g-signin2" data-onsuccess="onSignIn">
+      <img src="/image/google.png" alt="Google" class="google" />
+      使用Google登入/註冊
+    </div>
+    <button *ngIf="!isRegisterMode" (click)="login()">登入</button>
+    <button *ngIf="isRegisterMode" (click)="register()">註冊</button>
+  </section>
+</div>

@@ -1,0 +1,22 @@
+// 希望 <app-header> 的寬高由父容器（app-container）控制
+@screen-sm: 576px;
+@screen-md: 768px;
+@screen-lg: 992px;
+@screen-xl: 1200px;
+@screen-xxl: 1400px;
+.header-container {
+  flex-shrink: 0; // 確保 header 不會被壓縮
+  width: 100%; // 填滿父容器
+  height: 75px; // 根據需求設定高度
+  background-color: #17175f;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0px 10px;
+  @media (max-width: @screen-lg) {
+    height: 60px;
+  }
+  .logo {
+    height: 70%;
+  }
+}

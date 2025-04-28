@@ -1,0 +1,19 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; //若設為vh會導致內容被裁切 無滾動條
+  width: 100%; // 改為 100% 避免橫向滾動條
+  min-height: 100vh; // 設定最小高度為視窗高度
+  overflow-x: hidden; // 確保橫向內容超出時不會出現滾動條
+  background-color: antiquewhite;
+
+  .main-content {
+    width: 100%;
+    flex: 1; // 讓主內容區域自動填滿剩餘空間
+    // height: 100%;
+    background-image: url("/image/bg.png");
+    background-size: cover; // 確保圖片填滿視窗
+    background-position: center; // 將圖片置中
+    background-repeat: no-repeat; // 防止圖片重複
+  }
+}
